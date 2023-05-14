@@ -1,0 +1,19 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.93.139:8848
+    gateway:
+       routes:
+          - id: user-service # 路径id
+            uri: lb://userservice # 路由目的地,可以使用http://localhost:8081/，但是那样就深度耦合了.lb代表loadBalance,负载均衡
+            predicates: # 路由断言, 判断路由的规则，如果符合就转发到路由目的地
+              - Path=/person/**
+          - id: order-service
+            uri: lb://orderservice
+            predicates:
+              - Path=/order/**
