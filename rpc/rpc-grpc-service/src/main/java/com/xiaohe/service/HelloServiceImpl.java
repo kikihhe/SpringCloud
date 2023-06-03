@@ -29,6 +29,6 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
         builder.setResult("调用成功, name: " + name);
         // 3. 将返回值返回
         responseObserver.onNext(builder.build());
-        super.hello(request, responseObserver);
+        responseObserver.onCompleted();
     }
 }
