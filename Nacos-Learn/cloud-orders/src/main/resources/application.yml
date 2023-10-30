@@ -1,0 +1,25 @@
+
+
+server:
+  port: 9002
+
+
+spring:
+  # 使用测试环境的配置文件，当然也可以不使用
+  profiles:
+    active: test
+  application:
+    name: cloud-orders
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: dev
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+feign:
+  sentinel:
+    enabled: true

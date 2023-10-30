@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+
+spring:
+  application:
+    name: cloud-goods
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: dev
+    sentinel:
+      transport:
+        dashboard: localhost:8080
