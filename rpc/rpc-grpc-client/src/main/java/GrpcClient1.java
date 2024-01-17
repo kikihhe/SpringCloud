@@ -1,5 +1,3 @@
-import com.xioahe.HelloProto;
-import com.xioahe.HelloServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 

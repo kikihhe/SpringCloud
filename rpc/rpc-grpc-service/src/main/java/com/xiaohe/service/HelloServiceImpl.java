@@ -1,7 +1,5 @@
 package com.xiaohe.service;
 
-import com.xioahe.HelloProto;
-import com.xioahe.HelloServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 /**

@@ -1,17 +1,18 @@
 syntax = "proto3";
+package SpringJavaConfigExample;
 
-option java_multiple_files = false;
-option java_package = "com.xioahe";
-option java_outer_classname = "HelloProto";
+option java_package="com.example.java.grpc";
+option java_outer_classname="GrpcTestServiceProto";
+option java_multiple_files=true;
 
-message HelloRequest {
+service HelloService {
+  rpc hello(HelloRequest) returns (HelloReply){}
+}
+
+message HelloRequest{
   string name = 1;
 }
 
-message HelloResponse {
-  // 响应的消息
-  string result = 1;
-}
-service HelloService {
-  rpc hello(HelloRequest) returns (HelloResponse) {};
+message HelloReply {
+  string message = 1;
 }
