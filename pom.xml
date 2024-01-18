@@ -14,6 +14,7 @@
         <module>feignclient</module>
         <module>gateway</module>
         <module>zookeeper</module>
+        <module>rocksdb</module>
     </modules>
 
     <properties>
